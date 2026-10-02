@@ -1,0 +1,128 @@
+/* ============================================================
+   Colors and fonts — change these to restyle the whole site
+   ============================================================ */
+:root {
+  --bg:        #f3f6f7;   /* page background */
+  --bg-alt:    #e6eef0;   /* alternating section background */
+  --ink:       #18242e;   /* main text */
+  --muted:     #56656f;   /* secondary text */
+  --human:     #1d6f73;   /* "H" speaker colour (teal) */
+  --robot:     #9a3f6b;   /* "R" speaker colour (plum) */
+  --line:      #c9d6da;   /* borders */
+
+  --font-head: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Literata", Georgia, "Times New Roman", serif;
+  --width:     46rem;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.wrap { max-width: var(--width); margin: 0 auto; padding: 0 1.5rem; }
+
+a { color: var(--human); text-underline-offset: 0.2em; }
+a:hover { color: var(--robot); }
+a:focus-visible { outline: 2px solid var(--robot); outline-offset: 3px; border-radius: 2px; }
+
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.15; }
+h2 { font-size: 1.9rem; font-weight: 700; margin: 0 0 1.25rem; }
+h3 { font-size: 1.15rem; font-weight: 500; margin: 2.25rem 0 0.75rem; }
+p  { margin: 0 0 1rem; }
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 3.5rem; }
+.nav-home { font-family: var(--font-head); font-weight: 700; text-decoration: none; color: var(--ink); }
+.nav ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; font-family: var(--font-head); font-size: 0.95rem; }
+.nav ul a { color: var(--muted); text-decoration: none; }
+.nav ul a:hover { color: var(--ink); }
+
+/* ---------- Hero: title set as a two-turn exchange ---------- */
+.hero { padding: 5rem 0 4rem; }
+.title { margin: 0 0 1.5rem; font-size: clamp(2.6rem, 9vw, 5rem); font-weight: 700; letter-spacing: -0.02em; }
+.turn { display: flex; align-items: baseline; gap: 0.9rem; }
+.turn-b { justify-content: flex-end; color: var(--robot); }
+.turn-a { color: var(--human); }
+.speaker {
+  flex: none;
+  display: inline-grid; place-items: center;
+  width: 0.62em; height: 0.62em;
+  font-size: 0.45em; border-radius: 50%;
+  border: 2px solid currentColor;
+  transform: translateY(-0.35em);
+}
+.turn-b .speaker { order: 2; }
+.subtitle { font-family: var(--font-head); font-size: 1.35rem; font-weight: 500; margin-bottom: 1rem; }
+.meta { color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Sections ---------- */
+.section { padding: 4rem 0; }
+.section-alt { background: var(--bg-alt); }
+
+/* ---------- Schedule ---------- */
+.schedule { list-style: none; margin: 0; padding: 0; }
+.schedule li {
+  display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem;
+  padding: 0.85rem 0; border-top: 1px solid var(--line);
+}
+.schedule li:last-child { border-bottom: 1px solid var(--line); }
+.schedule .time { font-family: var(--font-head); font-variant-numeric: tabular-nums; color: var(--muted); }
+.schedule small { display: block; color: var(--muted); font-size: 0.9rem; font-style: italic; }
+.schedule .break .item { color: var(--muted); }
+
+/* ---------- Call for papers ---------- */
+.topics, .types { padding-left: 1.2rem; margin: 0 0 1rem; }
+.topics li, .types li { margin-bottom: 0.35rem; }
+.dates { border-collapse: collapse; width: 100%; }
+.dates td { padding: 0.6rem 0; border-top: 1px solid var(--line); }
+.dates tr:last-child td { border-bottom: 1px solid var(--line); }
+.dates td:last-child { text-align: right; font-family: var(--font-head); }
+
+/* ---------- Organizers ---------- */
+.people {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 2rem 1.5rem;
+}
+.person { text-align: center; }
+.photo {
+  position: relative; width: 7.5rem; height: 7.5rem; margin: 0 auto 0.75rem;
+  border-radius: 50%; overflow: hidden; background: var(--bg);
+  border: 1px solid var(--line);
+}
+/* Initials shown until a photo is added */
+.photo::before {
+  content: attr(data-initials);
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-family: var(--font-head); font-size: 1.8rem; color: var(--muted);
+}
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.name  { font-family: var(--font-head); font-weight: 500; margin: 0; line-height: 1.3; }
+.affil { color: var(--muted); font-size: 0.9rem; margin: 0.15rem 0 0.25rem; line-height: 1.4; }
+.email { font-size: 0.82rem; word-break: break-all; }
+
+/* ---------- Footer ---------- */
+.footer { padding: 2.5rem 0; color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 40rem) {
+  .nav-home { display: none; }
+  .nav-inner { justify-content: center; }
+  .nav ul { gap: 1rem; font-size: 0.88rem; }
+  .hero { padding: 3rem 0 2.5rem; }
+  .schedule li { grid-template-columns: 1fr; gap: 0.1rem; }
+}
