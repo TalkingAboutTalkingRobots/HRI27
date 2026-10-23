@@ -20,6 +20,7 @@
     <a href="#top" class="nav-home">TATR</a>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#keynotes">Keynotes</a></li>
       <li><a href="#schedule">Schedule</a></li>
       <li><a href="#cfp">Call for papers</a></li>
       <li><a href="#organizers">Organizers</a></li>
@@ -37,9 +38,9 @@
       <span class="turn turn-b"><span class="speaker" aria-hidden="true">R</span>talking robots</span>
     </h1>
     <p class="subtitle">Designing and Studying Human-Robot Dialogue Systems</p>
-    <!-- EDIT: fill in date and location once known -->
-    <p class="meta">A workshop at the ACM/IEEE International Conference on Human-Robot Interaction (HRI)<br>
-      Date and location to be announced</p>
+    <!-- EDIT: fill in the exact workshop day once known -->
+    <p class="meta">A half-day workshop at the ACM/IEEE International Conference on Human-Robot Interaction (HRI 2027)<br>
+      March 8–12, 2027 · Santa Clara, CA, USA · Exact date to be announced</p>
   </div>
 </header>
 
@@ -51,9 +52,41 @@
 <section id="about" class="section">
   <div class="wrap">
     <h2>About the workshop</h2>
-    <p>Conversation is one of the most intuitive ways people communicate, and dialogue has long been central to human-robot interaction. Large language models now let robots respond to almost anything a user says, but they bring new problems: unpredictability, latency, shallow or repetitive exchanges, and difficulty grounding talk in multimodal, embodied context.</p>
-    <p>They also change how we study conversation. How do we run controlled, reproducible studies with systems that can talk about anything, and how can we use them to study genuinely autonomous, open-ended human-robot conversation?</p>
-    <p>This half-day workshop brings together technical and social perspectives on human-robot dialogue to discuss what the next generation of conversational robots should look like.</p>
+    <p>Conversation is one of the most intuitive ways people communicate, and dialogue has been central to human-robot interaction since the very beginning of HRI, from task-oriented exchanges to building social bonds. Large language models have transformed what dialogue systems can do, but they are not an end-all solution: they are hard to predict, costly to run, can produce repetitive or superficial conversations, and still struggle to integrate multimodal, embodied context in real time.</p>
+    <p>They also change how we study conversation. How do we design studies that remain controllable, comparable and reproducible with systems that can talk about almost anything? And how can we use these systems to study fluent, open-ended human-robot conversation autonomously, beyond Wizard-of-Oz setups?</p>
+    <p>Four years after the last HRI workshop dedicated to dialogue, this half-day workshop brings together the technical and social sides of the human-robot dialogue community. Participants will hear two keynotes, present their own recent and ongoing work in short oral presentations, and exchange perspectives on current burning questions in guided break-out discussions, building a shared understanding of what makes human-robot dialogue work and how we should shape its future.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     KEYNOTES
+     To add a photo: put the image in images/keynotes/ with the
+     file name used in the src below. Until then, initials are shown.
+     ============================================================ -->
+<section id="keynotes" class="section section-alt">
+  <div class="wrap">
+    <h2>Keynote speakers</h2>
+    <ul class="keynotes">
+
+      <li class="keynote">
+        <div class="photo" data-initials="HB"><img src="images/keynotes/hendrik-buschmeier.jpg" alt="" onerror="this.remove()"></div>
+        <div>
+          <p class="name">Dr. Hendrik Buschmeier</p>
+          <p class="affil">Bielefeld University</p>
+          <p>A linguistic perspective on how human-robot dialogue phenomena can be studied and inform the design of dialogue systems.</p>
+        </div>
+      </li>
+
+      <li class="keynote">
+        <div class="photo" data-initials="HP"><img src="images/keynotes/hae-won-park.jpg" alt="" onerror="this.remove()"></div>
+        <div>
+          <p class="name">Dr. Hae Won Park</p>
+          <p class="affil">MIT Media Lab</p>
+          <p>Recent technical advances in building and deploying dialogue systems for social human-robot interaction.</p>
+        </div>
+      </li>
+
+    </ul>
   </div>
 </section>
 
@@ -61,41 +94,53 @@
      SCHEDULE
      To change: edit the rows below. Each row = one <li>.
      ============================================================ -->
-<section id="schedule" class="section section-alt">
+<section id="schedule" class="section">
   <div class="wrap">
     <h2>Tentative schedule</h2>
     <ol class="schedule">
-      <li><span class="time">14:00–14:05</span><span class="item">Welcome and introduction</span></li>
-      <li><span class="time">14:05–14:45</span><span class="item">Keynote 1 and Q&amp;A<small>Speaker to be announced</small></span></li>
+      <li><span class="time">14:00–14:05</span><span class="item">Welcome and introduction to the workshop</span></li>
+      <li><span class="time">14:05–14:45</span><span class="item">Keynote and Q&amp;A<small>Dr. Hendrik Buschmeier, Bielefeld University</small></span></li>
       <li><span class="time">14:45–15:30</span><span class="item">Paper presentations</span></li>
       <li class="break"><span class="time">15:30–15:50</span><span class="item">Coffee break and networking</span></li>
-      <li><span class="time">15:50–16:30</span><span class="item">Keynote 2 and Q&amp;A<small>Speaker to be announced</small></span></li>
-      <li><span class="time">16:30–17:15</span><span class="item">Interactive activity<small>Details to be announced</small></span></li>
-      <li><span class="time">17:15–17:45</span><span class="item">Group discussion<small>Details to be announced</small></span></li>
+      <li><span class="time">15:50–16:30</span><span class="item">Keynote and Q&amp;A<small>Dr. Hae Won Park, MIT Media Lab</small></span></li>
+      <li><span class="time">16:30–17:15</span><span class="item">Break-out discussions</span></li>
+      <li><span class="time">17:15–17:45</span><span class="item">Plenary discussion of break-out results</span></li>
       <li><span class="time">17:45–18:00</span><span class="item">Concluding remarks</span></li>
     </ol>
+
+    <h3>Break-out discussions</h3>
+    <p>In smaller groups, each facilitated by one of the organizers, participants will discuss specific challenges in human-robot dialogue around guiding questions such as:</p>
+    <ul class="topics">
+      <li>How can dialogue systems incorporate linguistic and psychological factors in human-robot interaction?</li>
+      <li>How should evaluation methodologies for human-robot dialogue systems be adapted to the capabilities of LLMs?</li>
+    </ul>
+    <p>Participants and keynote speakers are invited to propose further questions. Each group will identify key challenges, brainstorm recommendations and propose avenues for future work, to be presented in the plenary discussion. Outcomes will be shared on this website and may form the basis of a joint position paper with interested participants.</p>
   </div>
 </section>
 
 <!-- ============================================================
      CALL FOR PAPERS
      ============================================================ -->
-<section id="cfp" class="section">
+<section id="cfp" class="section section-alt">
   <div class="wrap">
     <h2>Call for papers</h2>
-    <p>We invite contributions on the technical and social sides of human-robot dialogue, from building conversational systems to designing studies that evaluate them.</p>
+    <p>We invite contributions on the technical and social sides of human-robot dialogue, from researchers experienced in developing and deploying dialogue systems for robots as well as those interested in incorporating dialogue into their own robotic systems. Papers may report recent results, describe ongoing work, or present position papers reflecting on the future of the field. Accepted papers will be presented as short oral talks.</p>
 
     <h3>Topics include, but are not limited to</h3>
     <!-- EDIT: adjust topics as you like -->
     <ul class="topics">
-      <li>Dialogue system architectures for robots that build on or go beyond LLMs</li>
-      <li>Multimodal input and output: gaze, gesture, prosody, turn-taking</li>
-      <li>Latency, incrementality and real-time conversation</li>
-      <li>Grounding dialogue in embodiment, tasks and the physical environment</li>
-      <li>Long-term, social and relational conversation</li>
-      <li>Study design for open-ended, LLM-driven interactions</li>
-      <li>Reproducibility, control and comparability in dialogue studies</li>
-      <li>Ethical considerations of deploying LLMs in social robots</li>
+      <li>Design and architectures of human-robot dialogue systems</li>
+      <li>Learning methods and algorithms for human-robot dialogue</li>
+      <li>Integration of multimodal input and output in human-robot dialogue</li>
+      <li>Adaptation and personalization in human-robot dialogue</li>
+      <li>Interaction design for human-robot conversations</li>
+      <li>Social dynamics and conversational behaviour in human-robot dialogue, e.g. feedback, turn-taking, trust</li>
+      <li>Integration of LLMs into human-robot dialogue systems</li>
+      <li>Applications and deployment of conversational robots</li>
+      <li>Evaluation methodologies for human-robot dialogue</li>
+      <li>Reproducibility and controllability of user studies with conversational robots</li>
+      <li>Safety, robustness and reliability in human-robot dialogue</li>
+      <li>Ethical considerations in human-robot dialogue, particularly regarding the use of LLMs</li>
     </ul>
 
     <h3>Submission types</h3>
@@ -103,7 +148,7 @@
       <li><strong>Extended abstracts</strong> — 2 pages</li>
       <li><strong>Short papers</strong> — 4 pages</li>
     </ul>
-    <p>Both formats may include up to 2 additional pages for references. Submissions are made through <a href="#">OpenReview</a> <!-- EDIT: add OpenReview link -->, where all papers are peer reviewed.</p>
+    <p>Both formats may include up to 2 additional pages for references. Submissions are made through <a href="#">OpenReview</a> <!-- EDIT: add OpenReview link -->, where all papers are peer reviewed. With the authors' permission, accepted papers will be made available on this website.</p>
 
     <h3>Important dates</h3>
     <!-- EDIT: fill in dates -->
@@ -122,7 +167,7 @@
      file name used in the src below (e.g. ruben-janssens.jpg).
      Until the file exists, initials are shown instead.
      ============================================================ -->
-<section id="organizers" class="section section-alt">
+<section id="organizers" class="section">
   <div class="wrap">
     <h2>Organizers</h2>
     <ul class="people">
@@ -144,13 +189,13 @@
       <li class="person">
         <div class="photo" data-initials="AA"><img src="images/organizers/agnes-axelsson.jpg" alt="" onerror="this.remove()"></div>
         <p class="name">Agnes Axelsson</p>
-        <p class="affil">KTH Royal Institute of Technology</p>
-        <a class="email" href="mailto:agnaxe@kth.se">agnaxe@kth.se</a>
+        <p class="affil">IIIA-CSIC</p>
+        <a class="email" href="mailto:agnes.axelsson@iiia.csic.es">agnes.axelsson@iiia.csic.es</a>
       </li>
 
       <li class="person">
         <div class="photo" data-initials="KP"><img src="images/organizers/kaitlynn-pineda.jpg" alt="" onerror="this.remove()"></div>
-        <p class="name">Kaitlynn Pineda</p>
+        <p class="name">Kaitlynn Taylor Pineda</p>
         <p class="affil">Johns Hopkins University</p>
         <a class="email" href="mailto:kpineda3@jhu.edu">kpineda3@jhu.edu</a>
       </li>

@@ -85,6 +85,13 @@ p  { margin: 0 0 1rem; }
 .schedule small { display: block; color: var(--muted); font-size: 0.9rem; font-style: italic; }
 .schedule .break .item { color: var(--muted); }
 
+/* ---------- Keynotes ---------- */
+.keynotes { list-style: none; margin: 0; padding: 0; display: grid; gap: 2rem; }
+.keynote { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1.5rem; align-items: start; }
+.keynote .photo { margin: 0; }
+.keynote .affil { margin-bottom: 0.5rem; }
+.keynote p:last-child { margin: 0; }
+
 /* ---------- Call for papers ---------- */
 .topics, .types { padding-left: 1.2rem; margin: 0 0 1rem; }
 .topics li, .types li { margin-bottom: 0.35rem; }
@@ -121,8 +128,11 @@ p  { margin: 0 0 1rem; }
 /* ---------- Small screens ---------- */
 @media (max-width: 40rem) {
   .nav-home { display: none; }
-  .nav-inner { justify-content: center; }
-  .nav ul { gap: 1rem; font-size: 0.88rem; }
+  .nav-inner { justify-content: center; height: auto; padding-top: 0.6rem; padding-bottom: 0.6rem; }
+  .nav ul { flex-wrap: wrap; justify-content: center; gap: 0.15rem 1rem; font-size: 0.88rem; }
+  .nav ul a { white-space: nowrap; }
   .hero { padding: 3rem 0 2.5rem; }
   .schedule li { grid-template-columns: 1fr; gap: 0.1rem; }
+  .keynote { grid-template-columns: 1fr; gap: 0.75rem; text-align: center; }
+  .keynote .photo { margin: 0 auto; }
 }
